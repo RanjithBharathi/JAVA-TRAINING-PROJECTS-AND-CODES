@@ -1,0 +1,60 @@
+class Queue {
+	int a[]=new int[5];
+	int front=-1;
+	int rear=-1;
+
+	public void enqueue(int data) {
+		if(rear==a.length-1) {
+			System.out.println("Queue full cant insert");
+		}
+		else {
+			if(front==-1) {
+				front=0;
+			}
+			rear++;
+			a[rear]=data;
+
+		}
+	}
+
+	public void dequeue() {
+		if(front==-1) {
+			System.out.println("Empty . no items to remove");
+		}
+		else {
+			front++;
+
+
+
+		}
+	}
+
+
+	public void display() {
+		System.out.println("The elements are"+" ");
+		for(int i=front; i<=rear; i++) {
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Queue s=new Queue();
+		s.enqueue(10);
+		s.enqueue(20);
+		s.enqueue(30);
+		s.enqueue(40);
+		s.enqueue(50);
+		
+		s.display();
+		System.out.println();
+		
+		s.enqueue(60);
+
+
+
+
+
+	}
+}
