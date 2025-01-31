@@ -1,0 +1,43 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+
+		Scanner s=new Scanner(System.in);
+
+
+		String Username="Ranjith";
+		String Password="ranjith@2004";
+		int attempts=3;
+
+		for(int i=0; i<=attempts; i++) {
+			System.out.println("Enter your user name");
+			String name=s.next();
+			System.out.println("Enter the password");
+			String pwd=s.next();
+
+
+
+			if(attempts!=0) {
+
+				if(name.matches(Username)&&pwd.matches(Password)) {
+					System.out.println("Logged in Succesfully");
+					break;
+				}
+				else {
+					System.out.println("Something went wrong . Try again");
+				    attempts=attempts-1;
+				}
+			}
+			else {
+				System.out.println("Locked");
+
+
+			}
+
+            
+		}
+
+	}
+}
