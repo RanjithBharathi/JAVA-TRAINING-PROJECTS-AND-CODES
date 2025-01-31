@@ -1,0 +1,158 @@
+class Node {
+	int data;
+	Node next;
+	Node prev;
+
+	Node(int data) {
+		this.data=data;
+		this.prev=null;
+		this.next=null;
+	}
+}
+
+class DLL {
+	Node head,tail;
+
+	public void insert1(int data) {
+		Node newnode=new Node(data);
+
+		if(head==null) {
+			head=newnode;
+			tail=newnode;
+		}
+		else {
+			newnode.next=head;
+			head.prev=newnode;
+			head=newnode;
+
+		}
+	}
+
+	public void insertend(int data) {
+		Node newnode=new Node(data);
+		if(head==null) {
+			head=newnode;
+			tail=newnode;
+		}
+		else {
+			tail.next=newnode;
+			newnode.prev=tail;
+			tail=newnode;
+
+		}
+
+	}
+
+	public void delete() {
+		if(head==null) {
+			System.out.println("Empty");
+		}
+
+		if(head==tail) {
+			head=tail=null;
+		}
+
+		else
+		{
+			head=head.next;
+			head.prev=null;
+		}
+	}
+
+	public void deleteend() {
+		if(head==null) {
+			System.out.println("Empty");
+		}
+
+		if(head==tail) {
+			head=tail=null;
+		}
+
+		else
+		{
+			tail=tail.prev;
+			tail.next=null;
+		}
+	}
+	
+	
+	
+	
+		public void middle(int pos,int data) {
+		Node newnode=new Node(data);
+			Node temp=head;
+		for(int i=0;i<=pos-1;i++){
+	
+		if(temp==null) {
+			head=newnode;
+			tail=newnode;
+		}
+		else {
+		newnode.next=temp.next;
+		newnode.prev=temp;
+		temp.next=newnode;
+		temp.next.prev=newnode;
+		
+
+		}
+}
+	}
+	
+	
+	
+	
+	
+	
+	
+
+
+
+	public void display() {
+		Node temp=head;
+		if(temp.next!=null) {
+			System.out.println("List is empty");
+		}
+
+		while(temp!=null) {
+			System.out.print(temp.data);
+
+			if(temp.next!=null) {
+				System.out.print(" <-> ");
+
+			}
+			temp=temp.next;
+		}
+	}
+}
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		DLL d=new DLL();
+	
+		
+		d.insert1(400);
+		d.insert1(300);
+		d.insert1(200);
+		d.insert1(100);
+		d.middle(2,76567);
+		d.display();
+		
+		/*System.out.println();
+		
+		d.insertend(890);
+		d.display();
+		
+		System.out.println();
+		d.delete();
+		d.display();
+		
+		System.out.println();
+		
+		d.deleteend();
+		d.display();*/
+
+	}
+}
