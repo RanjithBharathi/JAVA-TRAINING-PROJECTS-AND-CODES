@@ -1,0 +1,95 @@
+//FULLY AUTOMATIC VENDING MACHINE
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    System.out.println("FULLY AUTOMATIC VENDING MACHINE");
+
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the Type of item \nc-Coffee\nt-Tea\ns-Soup\n\n");
+		char ch=s.next().charAt(0);
+
+		switch(ch) {
+		case 'c':
+			System.out.println("Enter the item 1.Espresso\n 2.Latte\n3.cappacino");
+			int item=s.nextInt();
+			switch(item) {
+			case 1:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Espresso Coffee");
+				break;
+			case 2:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Latte Coffee");
+				break;
+			case 3:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Cappacino Coffee");
+				break;
+			default:
+				System.out.println("Invaild Input");
+			}
+			break;
+
+		case 't':
+			System.out.println("Enter the item 1.Plain Tea\n 2.Assam Tea\n3.Ginger Tea\n4.Cardamom Tea\n5.Lemon Tea\n6.Green Tea\n7.Organic Tea");
+			item=s.nextInt();
+			switch(item) {
+			case 1:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Plain Tea");
+				break;
+			case 2:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Assam Tea");
+				break;
+			case 3:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Ginger Tea");
+				break;
+			case 4:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Cardamom Tea");
+				break;
+			case 5:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Lemon Tea");
+				break;
+			case 6:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Green Tea");
+				break;
+			default:
+				System.out.println("Invaild Input");
+			}
+			break;
+
+		case 's':
+			System.out.println("Enter the item 1.HotSour Soup\n 2.Veg corn soup\n3.Spicy Tomato Soup");
+			item=s.nextInt();
+			switch(item) {
+			case 1:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur HotSour Soup");
+				break;
+			case 2:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Veg corn soup");
+				break;
+			case 3:
+				System.out.println("WELCOME TO CCD!");
+				System.out.println("Enjoy ur Spicy Tomato Soup");
+				break;
+
+			default:
+				System.out.println("Invaild Input");
+			}
+		default:
+			System.out.println("Invaild Input");
+			break;
+
+		}
+
+	}
+}
