@@ -1,0 +1,36 @@
+create database office;
+use office;
+
+CREATE TABLE office (
+    Sno INT ,
+    Employee_ID VARCHAR(20),
+    EmployeeName VARCHAR(20),
+    Date_of_birth DATE,
+    Date_of_joining DATE,
+    Salary INT,
+    Bonus FLOAT,
+    City VARCHAR(20),
+    Address VARCHAR(20),
+    EmailID VARCHAR(50),
+    EmployeeStatus VARCHAR(20),
+    Created_At TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO office (Sno, Employee_ID, EmployeeName, Date_of_birth, Date_of_joining, Salary, Bonus, City, Address, EmailID, EmployeeStatus)
+VALUES (1, '22BAD093', 'RANJITH', '2004-11-06', '2022-11-09', 50000, 400.0, 'DHARAPURAM', 'THERPATHAI', 'rrb@gmail.com', 'Active');
+
+INSERT INTO office (Sno, Employee_ID, EmployeeName, Date_of_birth, Date_of_joining, Salary, Bonus, City, Address, EmailID, EmployeeStatus)
+VALUES (2, '22BAD029', 'ABISH', '2004-09-06', '2022-11-09', 60000, 400.0, 'TCODE', 'SITHAMPATTI', 'ABI@gmail.com', 'Active');
+
+INSERT INTO office (Sno, Employee_ID, EmployeeName, Date_of_birth, Date_of_joining, Salary, Bonus, City, Address, EmailID, EmployeeStatus)
+VALUES (3, '22BAD063', 'SREE', '2004-04-06', '2022-11-09', 50000, 400.0, 'CHENNAI', 'ECR', 'sree@gmail.com', 'Active');
+
+INSERT INTO office (Sno, Employee_ID, EmployeeName, Date_of_birth, Date_of_joining, Salary, Bonus, City, Address, EmailID, EmployeeStatus)
+VALUES (4, '22BAD041', 'KARTHI', '2004-11-18', '2022-11-09', 50000, 400.0, 'POLLACHI', 'ECR', 'soker@gmail.com', 'Active'),
+(5, '22BAD083', 'DEEPIKA', '2005-04-06', '2022-11-09', 50000, 400.0, 'POLLACHI', 'KOTTAMPATTI', 'deepi@gmail.com', 'Active'),
+(6, '22BAD085', 'DARANIDARAN', '2004-04-09', '2022-11-09', 70000, 400.0, 'CHENNAI', 'OMR', 'dvd@gmail.com', 'Active');
+
+
+select*from office;
+
+
