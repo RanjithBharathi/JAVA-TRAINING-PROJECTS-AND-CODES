@@ -1,0 +1,69 @@
+import java.util.*;
+
+abstract class Bank {
+	private String Accname;
+	private double balance;
+
+	Bank(String Accname,double balance) {
+		this.Accname=Accname;
+		this.balance=balance;
+	}
+	public abstract void display();
+
+	public String getAccname() {
+		return Accname;
+	}
+
+	public void setAccname(String Accname) {
+		this.Accname=Accname;
+	}
+
+	public double getbalance() {
+		return balance;
+
+	}
+	public void setbalance(double balance) {
+		this.balance=balance;
+	}
+
+
+	public void deposit(double amount) {
+		if(amount>0) {
+			balance+=amount;
+			System.out.println("\nDeposited Amount is "+amount);
+		}
+		else {
+			System.out.println("Invalid Amount");
+		}
+	}
+	public void withdraw(double amount) {
+		if(amount<balance) {
+			balance-=amount;
+			System.out.println("Withdrwal Amount is "+amount);
+		}
+		else {
+			System.out.println("Invalid Amount");
+		}
+	}
+}
+
+class Savings extends Bank {
+	public Savings(String Accname,double balance) {
+		super(Accname,balance);
+	}
+	@Override
+	public void display() {
+		System.out.println("\nSavings Account at RRB bank");
+		System.out.println("AccountHolder : "+ getAccname());
+		System.out.println("Balance : "+getbalance());
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+		Bank b=new Savings("Ranjith",10000);
+		b.display();
+		b.deposit(7865);
+		b.withdraw(987);
+		b.display();
+	}
+}
